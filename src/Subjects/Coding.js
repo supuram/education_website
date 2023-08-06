@@ -3,14 +3,14 @@ import Navbar from "../Home/Button/Navbar.js";
 import './Coding.css'
 import Topbar from "../Home/Topbar/Topbar.js"
 import { useNavigate } from 'react-router-dom';
-import code1 from './../images/4.svg'
-import code2 from './../images/Coding/2.svg'
-import code3 from './../images/Coding/3.svg'
-import code4 from './../images/Coding/4.svg'
-import code5 from './../images/Coding/5.svg'
-import code6 from './../images/Coding/6.svg'
-import code7 from './../images/Coding/7.svg'
-import code8 from './../images/Coding/8.svg'
+import code1 from './../images/Coding/1.jpg'
+import code2 from './../images/Coding/2.jpg'
+import code3 from './../images/Coding/3.jpg'
+import code4 from './../images/Coding/4.jpg'
+import code5 from './../images/Coding/5.jpg'
+import code6 from './../images/Coding/6.jpg'
+import code7 from './../images/Coding/7.jpg'
+import code8 from './../images/Coding/8.jpg'
 
 export default function Coding(){
     const navigate = useNavigate();

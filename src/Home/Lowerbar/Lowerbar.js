@@ -1,14 +1,14 @@
 import React from "react";
 import './Lowerbar.css';
 import { useNavigate } from 'react-router-dom';
-import st1 from './../../images/Lowerbar/1.svg'
-import st2 from './../../images/Lowerbar/2.svg'
-import st3 from './../../images/Lowerbar/3.svg'
-import st4 from './../../images/Lowerbar/4.svg'
-import st5 from './../../images/Lowerbar/5.svg'
-import st6 from './../../images/Lowerbar/6.svg'
-import st7 from './../../images/Lowerbar/7.svg'
-import st8 from './../../images/Lowerbar/8.svg'
+import st1 from './../../images/Lowerbar/1.jpg'
+import st2 from './../../images/Lowerbar/2.jpg'
+import st3 from './../../images/Lowerbar/3.jpg'
+import st4 from './../../images/Lowerbar/4.jpg'
+import st5 from './../../images/Lowerbar/5.jpg'
+import st6 from './../../images/Lowerbar/6.jpg'
+import st7 from './../../images/Lowerbar/7.jpg'
+import st8 from './../../images/Lowerbar/8.jpg'
 
 export default function Lowerbar(){
     const navigate = useNavigate();
