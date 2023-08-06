@@ -1,19 +1,16 @@
 import React from "react";
-import learning from './../../images/learning.png'
 import './Middlebar.css'
-import { Link } from 'react-router-dom'
+import ImageSlider from './ImageSlider.js'
+import student1 from './../../images/Middlebar/1.svg'
+import student2 from './../../images/Middlebar/2.svg'
+import student3 from './../../images/Middlebar/3.svg'
+import student4 from './../../images/Middlebar/4.svg'
 
 export default function Middlebar(){
+    const images = [student1, student2, student3, student4]
     return(
-        <div className="divMiddlebar">
-            <div className="childdivMiddlebar">
-                <img src={learning} alt='' className="imgMiddlebar"></img>
-                <div className="childdivchilddivMiddlebar">
-                    <h2>Education for All</h2>
-                    <p>Online education positively transforms the future, serving as the progressive path forward. With accessibility, flexibility, and global reach, it empowers learners worldwide, bridging gaps and enabling lifelong learning, revolutionizing education.</p>
-                </div>
-            </div>
-            <button className="buttonMiddlebar1"><Link to='/contactus' className="navButton">BOOK TRIAL</Link></button>
+        <div style={{marginTop:'2rem'}}>
+            <ImageSlider images={images} />
         </div>
     )
 }

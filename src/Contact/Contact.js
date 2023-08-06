@@ -5,7 +5,7 @@ import smartphone from './../images/smartphone.png'
 export default function Contact(){
     return(
         <div className="divContactus">
-            <h1>Contact Us to BOOK TRIAL</h1>
+            <h1 className="h1divContactus">Contact Us to BOOK TRIAL</h1>
             <div className="divchildContactus">
                 <div className="imgandpindivContactus">
                     <img src={smartphone} alt='' className="imgContactus"></img>

@@ -1,26 +1,12 @@
 .divTopbar{
     display: flex;
-    gap:130px;
-    background: linear-gradient(to right, rgb(176, 134, 244, 0.5), rgb(204, 255, 121, 0.8));
+    gap:8.125rem;
+    background-color:  rgb(9, 5, 49);
 }
 
 .iconTopbar{
-    width: 70px;
-    height: 80px;
-    padding: 20px;
-    margin-left: 10px;
-}
-
-.ulTopbar{
-    list-style-type: none;
-    display: flex;
-    gap:200px;
-    font-size: 2rem;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: bold;
-    padding: 30px;
-}
-
-.ulTopbar li .navLink{
-    text-decoration: none;
+    width: 2.4rem;
+    height: 2rem;
+    padding: 1.2rem;
+    margin-left: 0.8rem;
 }

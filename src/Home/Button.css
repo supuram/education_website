@@ -1,12 +1,12 @@
 .buttonMiddlebar{
-    width:400px;
-    height:120px;
-    border-radius: 20px;
-    margin-left:420px;
+    width:24rem;
+    height:9rem;
+    border-radius: 1.2rem;
+    margin-left:29rem;
     background-color: rgb(151, 151, 255);
     font-size: 3.5rem;
     font-weight: bold;
-    margin-top: -30px;
+    margin-top: -2rem;
 }
 
 .buttonMiddlebar .navButton{

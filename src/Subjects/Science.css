@@ -1,18 +1,18 @@
 .imgScience{
-    width: 250px;
-    height: 250px;
-    margin-left: 30px;
-    margin-top: 30px;
+    width: 15.7rem;
+    height: 15.7rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
 }
 
 .divchildScience{
     display: flex;
-    gap:40px;
+    gap:2.5rem;
 }
 
 .divchildScience p{
-    margin: 10px;
-    padding: 50px;
-    font-size: 1.65rem;
+    margin: 0.7rem;
+    padding: 3rem;
+    font-size: 1.8rem;
     line-height: 1.6;
 }

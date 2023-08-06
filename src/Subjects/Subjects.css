@@ -2,6 +2,13 @@
     margin:0;
 }
 
+.iconCoding{
+    width: 9rem;
+    height: 8rem;
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+}
+
 .ulSubjects{
     list-style-type: none;
     display: flex;

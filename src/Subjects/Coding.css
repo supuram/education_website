@@ -1,18 +1,77 @@
-.imgCoding{
-    width: 250px;
-    height: 250px;
-    margin-left: 30px;
-    margin-top: 30px;
-}
-
-.divchildCoding{
+.divContainerCoding{
     display: flex;
-    gap:40px;
+    gap:1rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
-.divchildCoding p{
-    margin: 30px;
-    padding: 50px;
-    font-size: 1.43rem;
-    line-height: 1.6;
+.divContainerCodingagain{
+    width:18rem;
+    height: 25rem;
+    background-color: rgb(43, 37, 103);
+    border-radius: 3%;
+    margin:0;
+    padding:0;
+    overflow: hidden;
+}
+
+.childdivContainerCoding1{
+    width:18rem;
+    height: 10rem;
+}
+/* --------------------------------------------------------------------------------------------------- */
+.h2childdivContainerCoding1WebDev{
+    margin:1.5rem;
+    color: gold;
+    font-size: 1.9rem;
+}
+.spanchilddivContainerCoding1WebDev{
+    margin-right: 1.15rem;
+}
+.spanDevelopmentchilddivContainerCoding1WebDev{
+    display: inline-block;
+    margin-top: 1.2rem;
+}
+.p1childdivContainerCoding1WebDev{
+    margin:1.5rem;
+    font-size: 1.4rem;
+    color: rgb(208, 255, 0);
+}
+.p2childdivContainerCoding1WebDev{
+    margin: 1.5rem;
+    font-size: 1.4rem;
+    color: rgb(255, 70, 240);
+}
+/* ----------------------------------------------------------------------------------------------------- */
+.h2childdivContainerCoding1ReactTeach{
+    margin:1.5rem;
+    color: gold;
+    font-size: 1.9rem;
+}
+.spanReactchilddivContainerCoding1{
+    margin-right: 1.15rem;
+}
+.spanCoursechilddivContainerCoding1ReactTeach{
+    display: inline-block;
+    margin-top: 1.2rem;
+}
+.p1childdivContainerCoding1ReactTeach{
+    margin:1.5rem;
+    font-size: 1.4rem;
+    color: rgb(208, 255, 0);
+}
+.p2childdivContainerCoding1ReactTeach{
+    margin:1.5rem;
+    font-size: 1.4rem;
+    color: rgb(255, 70, 240);
+}
+
+
+.imgCoding{
+    margin-left: 1.45rem;
+    margin-top: 2rem;
+    height:400px;
+    overflow: hidden;
+    
 }
