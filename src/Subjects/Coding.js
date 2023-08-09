@@ -1,16 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import Navbar from "../Home/Button/Navbar.js";
 import './Coding.css'
+import './../Home/Home.css'
 import Topbar from "../Home/Topbar/Topbar.js"
 import { useNavigate } from 'react-router-dom';
-import code1 from './../images/Coding/1.jpg'
-import code2 from './../images/Coding/2.jpg'
-import code3 from './../images/Coding/3.jpg'
-import code4 from './../images/Coding/4.jpg'
-import code5 from './../images/Coding/5.jpg'
-import code6 from './../images/Coding/6.jpg'
-import code7 from './../images/Coding/7.jpg'
-import code8 from './../images/Coding/8.jpg'
 
 export default function Coding(){
     const navigate = useNavigate();
@@ -21,62 +14,112 @@ export default function Coding(){
     
     return(
         <div className="divCoding">
-            <Topbar />
-            <Navbar/>
+            <div className="fixeddivHome">
+                <Topbar />
+                <Navbar />
+            </div>
 
-
-
-{/*
             <div className="divContainerCoding">
-                <div className="divContainerCodingagain" onClick={() => handleButtonClick('/coding/webdev')}>
+                <div className="divContainerCodingagain" onClick={() => handleButtonClick('/contactus')}>
                     <div className="childdivContainerCoding1">
-                        <h2 className="h2childdivContainerCoding1WebDev">
-                            <span className="spanchilddivContainerCoding1WebDev">FULL</span> <span>STACK</span> <span className="spanDevelopmentchilddivContainerCoding1WebDev">DEVELOPMENT</span>
+                        <h2 className="h2childdivContainerCoding1">
+                            <span className="span1childdivContainerCoding1">FULL</span> <span>STACK</span> <span className="span2childdivContainerCoding1">DEVELOPMENT</span>
                         </h2>
-                        <p className="p1childdivContainerCoding1WebDev">Learn how to build awesome websites and gain skill </p>
-                        <p className="p2childdivContainerCoding1WebDev">Learn from excellent teachers who will take you on a journey of something you have never experienced</p>
+                        <p className="p1childdivContainerCoding1">Learn how to build awesome websites and gain skill </p>
+                        <p className="p2childdivContainerCoding1">Learn from excellent teachers who will take you on a journey of something you have never experienced</p>
                     </div>
                 </div>
 
 
 
 
-                <div className="divContainerCodingagain" onClick={() => handleButtonClick('/coding/reactteach')}>
+                <div className="divContainerCodingagain" onClick={() => handleButtonClick('/contactus')}>
                     <div className="childdivContainerCoding1">
-                        <h2 className="h2childdivContainerCoding1ReactTeach">
-                            <span className="spanReactchilddivContainerCoding1">REACT</span><span>FULL</span><span className="spanCoursechilddivContainerCoding1ReactTeach">COURSE</span>
+                        <h2 className="h2childdivContainerCoding1">
+                            <span className="span1childdivContainerCoding1">REACT</span><span>FULL</span><span className="span2childdivContainerCoding1">COURSE</span>
                         </h2>
-                        <p className="p1childdivContainerCoding1ReactTeach">Learn one of the most versatile frameworks React from our experienced teachers</p>
-                        <p className="p2childdivContainerCoding1ReactTeach">Learn to build industry grade professional websites</p>
+                        <p className="p1childdivContainerCoding1">Learn one of the most versatile frameworks React from our experienced teachers</p>
+                        <p className="p2childdivContainerCoding1">Learn to build industry grade professional websites</p>
                     </div>
                 </div>
 
 
 
 
-                <div className="divContainerCodingagain" onClick={() => handleButtonClick('/coding/python')}>
+                <div className="divContainerCodingagain" onClick={() => handleButtonClick('/contactus')}>
                     <div className="childdivContainerCoding1">
-
+                        <h2 className="h2childdivContainerCoding1">
+                            <span className="span1childdivContainerCoding1">PYTHON</span><span>FULL</span><span className="span2childdivContainerCoding1">COURSE</span>
+                        </h2>
+                        <p className="p1childdivContainerCoding1">Learn all about Python, build games, apps and many more</p>
+                        <p className="p2childdivContainerCoding1">With our experienced tutors gain a deep understanding of Python</p>
                     </div>
                 </div>
 
 
                 
-                <div className="divContainerCodingagain" onClick={() => handleButtonClick('/coding/javascript')}>
+                <div className="divContainerCodingagain" onClick={() => handleButtonClick('/contactus')}>
                     <div className="childdivContainerCoding1">
-
+                        <h2 className="h2childdivContainerCoding1">
+                            <span className="span1childdivContainerCoding1">JAVASCRIPT</span><span>FULL</span><span className="span2childdivContainerCoding1">COURSE</span>
+                        </h2>
+                        <p className="p1childdivContainerCoding1">Learn Javascript by building awesome projects</p>
+                        <p className="p2childdivContainerCoding1">With our experienced tutors delve into the world of javascript and build awesome websites</p>
                     </div>
                 </div>
+
+
+
+                <div className="divContainerCodingagain" onClick={() => handleButtonClick('/contactus')}>
+                    <div className="childdivContainerCoding1">
+                        <h2 className="h2childdivContainerCoding1">
+                            <span className="span1childdivContainerCoding1">JAVA</span><span>FULL</span><span className="span2childdivContainerCoding1" style={{marginLeft:'1rem'}}>COURSE</span>
+                        </h2>
+                        <p className="p1childdivContainerCoding1">Learn Java by building awesome projects</p>
+                        <p className="p2childdivContainerCoding1">With our experienced tutors delve into the world of java and learn DSA</p>
+                    </div>
+                </div>
+
+
+
+                <div className="divContainerCodingagain" onClick={() => handleButtonClick('/contactus')}>
+                    <div className="childdivContainerCoding1">
+                        <h2 className="h2childdivContainerCoding1">
+                            <span className="span1childdivContainerCoding1">C++</span><span>FULL</span><span className="span2childdivContainerCoding1" style={{marginLeft:'1rem'}}>COURSE</span>
+                        </h2>
+                        <p className="p1childdivContainerCoding1">Learn DSA using C++</p>
+                        <p className="p2childdivContainerCoding1">With our experienced tutors delve into the world of C++</p>
+                    </div>
+                </div>
+
+
+
+                <div className="divContainerCodingagain" onClick={() => handleButtonClick('/contactus')}>
+                    <div className="childdivContainerCoding1">
+                        <h2 className="h2childdivContainerCoding1">
+                            <span className="span1childdivContainerCoding1">REACT</span><span>FULL</span><span className="span2childdivContainerCoding1">COURSE</span>
+                        </h2>
+                        <p className="p1childdivContainerCoding1">Learn Web Development using react and build powerful websites</p>
+                        <p className="p2childdivContainerCoding1">With our experienced tutors delve into the world of React and build awesome websites</p>
+                    </div>
+                </div>
+
+
+
+                <div className="divContainerCodingagain" onClick={() => handleButtonClick('/contactus')}>
+                    <div className="childdivContainerCoding1">
+                        <h2 className="h2childdivContainerCoding1">
+                            <span className="span1childdivContainerCoding1">MACHINE</span><span>LEARNING</span><span className="span2childdivContainerCoding1">COURSE</span>
+                        </h2>
+                        <p className="p1childdivContainerCoding1">Learn ML, Tensorflow, Deep Learning and many more</p>
+                        <p className="p2childdivContainerCoding1">With our experienced tutors delve into the world of Machine Learning by building projects</p>
+                    </div>
+                </div>
+
+
             </div>
-            */}
-            <img src={code1} alt='' className="imgCoding"></img>
-            <img src={code2} alt='' className="imgCoding"></img>
-            <img src={code3} alt='' className="imgCoding"></img>
-            <img src={code4} alt='' className="imgCoding"></img>
-            <img src={code5} alt='' className="imgCoding"></img>
-            <img src={code6} alt='' className="imgCoding"></img>
-            <img src={code7} alt='' className="imgCoding"></img>
-            <img src={code8} alt='' className="imgCoding"></img>
+            
+            
         </div>
     )
 }
