@@ -28,3 +28,15 @@
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+
+@media (max-width:768px){
+    .divContainerScience{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .divContainerScienceagain{
+        width:70%;
+        margin-bottom: 1rem;
+    }
+}
