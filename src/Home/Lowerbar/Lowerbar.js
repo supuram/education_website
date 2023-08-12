@@ -9,7 +9,7 @@ export default function Lowerbar(){
     };
     return(
         <div className="divmainLowerbar">
-            <h1 style={{color:'black', marginTop:'2rem', marginLeft: '2rem', fontSize: '3rem', fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}>Which Course Do You Want ?</h1>
+            <h1 style={{color:'black', marginTop:'2rem', marginLeft: '2rem', fontSize: '3rem', fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Which Course Do You Want ?</h1>
 
             <div className='divLowerbar'>
                 <div onClick={() => handleButtonClick('/coding')} className='divchildLowerbar' style={{backgroundColor:'rgb(78, 92, 255)'}}>
