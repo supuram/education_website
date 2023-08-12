@@ -3,9 +3,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black !important; /* Set background color to black */
+    background-color: rgb(255, 255, 255) !important; /* Set background color to black */
     padding: 10px 20px;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 /* Hamburger icon */
@@ -27,7 +27,7 @@
 .navLinks {
     display: flex;
     align-items: center;
-    background-color: black !important; /* Set background color to black */
+    background-color: rgb(255, 255, 255) !important; /* Set background color to black */
 }
 
 /* Individual navigation link */

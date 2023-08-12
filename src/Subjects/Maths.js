@@ -17,7 +17,7 @@ export default function Maths(){
                 <Navbar />
             </div>
             <div className="divContainerScience">
-                <div className="divContainerScienceagain" onClick={() => handleButtonClick('/contactus')}>
+                <div className="divContainerScienceagain" onClick={() => handleButtonClick('/contactus')} style={{backgroundColor:'rgb(114, 100, 18)'}}>
                     <div className="childdivContainerScience">
                         <h2 className="h2childdivContainerScience">
                             <span className="span1childdivContainerScience">PRIMARY</span>
@@ -29,7 +29,7 @@ export default function Maths(){
 
 
 
-                <div className="divContainerScienceagain" onClick={() => handleButtonClick('/contactus')}>
+                <div className="divContainerScienceagain" onClick={() => handleButtonClick('/contactus')} style={{backgroundColor:'rgb(174, 10, 18)'}}>
                     <div className="childdivContainerScience">
                         <h2 className="h2childdivContainerScience">
                             <span className="span1childdivContainerScience">MIDDLE  SCHOOL</span>
@@ -41,7 +41,7 @@ export default function Maths(){
 
 
 
-                <div className="divContainerScienceagain" onClick={() => handleButtonClick('/contactus')}>
+                <div className="divContainerScienceagain" onClick={() => handleButtonClick('/contactus')} style={{backgroundColor:'rgb(14, 100, 189)'}}>
                     <div className="childdivContainerScience">
                         <h2 className="h2childdivContainerScience">
                             <span className="span1childdivContainerScience">SECONDARY</span>

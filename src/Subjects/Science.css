@@ -3,7 +3,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap:1rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
     margin-left: 2rem;
     margin-right: 2rem;
 }
@@ -16,7 +16,7 @@
     margin:0;
     padding:0;
     overflow: hidden;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     cursor: pointer;
 }
 
