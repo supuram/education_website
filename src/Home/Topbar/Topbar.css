@@ -29,3 +29,23 @@ body{
     top:13px;
     left:10px;
 }
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .divchildTopbar{
+        width:5rem;
+        height:3rem;
+        background-color: red;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        border-radius: 10px;
+        position: absolute;
+        left:60%;
+        top:10%;
+        cursor: pointer;
+    }
+    .spandivchildTopbar{
+        position: relative;
+        top:13px;
+        left:10px;
+    }
+}

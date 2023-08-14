@@ -8,12 +8,12 @@
 }
   
 .nav-link:hover {
-    color: rgb(72, 255, 0); 
-    background-color: rgb(147, 107, 241);
+    color: rgb(255, 158, 23); 
+    background-color: rgb(24, 147, 255);
 }
 .active {
-    color: red;
-    background-color: greenyellow;
+    color: rgb(255, 255, 0);
+    background-color: rgb(5, 35, 110);
     font-weight: bold; 
 }
   

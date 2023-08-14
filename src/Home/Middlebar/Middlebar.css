@@ -1,10 +1,6 @@
 body{
     overflow-x: hidden;
 }
-/*  
-.divMiddlebar{
-    background-image: url('./../../images/1.svg');
-}  */
 
 .divMiddlebar{
     position: relative;
@@ -28,21 +24,31 @@ body{
 .animatedHeadingMiddlebar{
     opacity: 0; 
     transition: opacity 2s ease-in-out;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .animatedHeadingMiddlebar.active1 {
     opacity: 1; 
     transition: opacity 2s ease-in-out;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 
 /* Media query for smaller screens */
 @media screen and (max-width: 768px) {
     .divMiddlebar {
-        flex-direction: column; /* Stack items vertically on small screens */
+      display: flex;
+      flex-direction: column; /* Stack items vertically on small screens */
+      align-items: center; /* Center items horizontally on small screens */
     }
-    
+  
+    .textOverlaydivMiddlebar {
+      top: 50%; /* Center vertically on small screens */
+      left: 50%; /* Center horizontally on small screens */
+      transform: translate(-50%, -50%);
+    }
+  
     .animatedHeadingMiddlebar {
-        font-size: 1.5rem; /* Adjust font size for smaller screens */
+      font-size: 3rem; /* Adjust font size for smaller screens */
     }
-}
+}  
