@@ -57,6 +57,13 @@ body{
     }
   
     .textOverlaydivMiddlebar h4, .animatedHeadingMiddlebar {
-      font-size: 1.2rem; /* Adjust font size for smaller screens */
+      font-size: 2.2rem; /* Adjust font size for smaller screens */
+    }
+
+    .textOverlaydivMiddlebar h4, .animatedHeadingMiddlebar.active1 {
+        opacity: 1; 
+        transition: opacity 2s ease-in-out;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 2.2rem;
     }
 }  
