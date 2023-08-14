@@ -20,3 +20,32 @@
 .divchildContactus h2{
     margin-bottom: 1.3rem;
 }
+
+/* Mobile-friendly adjustments */
+@media screen and (max-width: 768px) {
+    .divContactus {
+        margin: 2rem 0.5rem; /* Adjust margins for better spacing */
+        width: 100%;
+        height: auto; /* Remove fixed height */
+    }
+
+    .divchildContactus {
+        margin: 1rem 0;
+    }
+
+    .h3divContactus {
+        font-size: 1.5rem;
+        padding: 0.5rem; /* Reduce padding for better spacing */
+        margin: 0.5rem 0;
+    }
+
+    .divchildContactus h2 {
+        font-size: 1rem;
+        margin-bottom: 1rem; /* Add some spacing between items */
+    }
+
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+}

@@ -22,7 +22,7 @@ export default function Contact(){
                 </div>
             </div>
             <div>
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf0lZf_a_CneWwkYbc01uQdzv4i_lHCGwIn2RXNFuEusJq3gQ/viewform?embedded=true" width="1140" height="1350" frameborder="0" marginheight="0" marginwidth="0" >Loading…</iframe>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf0lZf_a_CneWwkYbc01uQdzv4i_lHCGwIn2RXNFuEusJq3gQ/viewform?embedded=true" width="640" height="1350" frameborder="0" marginheight="0" marginwidth="0" >Loading…</iframe>
             </div>
         </div>
     )
