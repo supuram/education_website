@@ -31,7 +31,7 @@ body{
 }
 
 /* Media query for smaller screens */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 300px) {
     .divchildTopbar{
         width:5rem;
         height:3rem;
