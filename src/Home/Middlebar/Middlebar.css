@@ -41,7 +41,13 @@ body{
       flex-direction: column; /* Stack items vertically on small screens */
       align-items: center; /* Center items horizontally on small screens */
     }
-  
+
+    .imgMiddlebar {
+        width: 100%; /* Make the image width 100% of its container on small screens */
+        max-width: 100%; /* Ensure the image doesn't exceed its original size */
+        height: auto; /* Maintain the image's aspect ratio */
+    }
+
     .textOverlaydivMiddlebar {
       top: 50%; /* Center vertically on small screens */
       left: 50%; /* Center horizontally on small screens */
