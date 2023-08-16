@@ -75,11 +75,20 @@ export default function Lowerbar(){
                 </div>
 
 
-                <div onClick={() => handleButtonClick('/foundation')} className='divchildLowerbar' style={{backgroundColor:'rgb(174, 0, 148)'}}>
-                    <h1 className="divchildLowerbarh1">FOUNDATION</h1>
+                <div onClick={() => handleButtonClick('/humanities')} className='divchildLowerbar' style={{backgroundColor:'rgb(174, 0, 148)'}}>
+                    <h1 className="divchildLowerbarh1">HUMANITIES</h1>
                     <ul className="divchildLowerbarul">
-                        <li className="lidivchildLowerbarul">In your formative years ? Join our foundation course to have a solid all round understanding</li>
-                        <li>With our experienced tutors grasp difficult concepts and be prepared for your middle school</li>
+                        <li className="lidivchildLowerbarul">Are you in class 6-12 or in College or in University ?  Do not worry. </li>
+                        <li>With our experienced tutors grasp difficult concepts and be prepared for your humanities courses</li>
+                    </ul>
+                </div>
+
+
+                <div onClick={() => handleButtonClick('/engineering')} className='divchildLowerbar' style={{backgroundColor:'rgb(45, 50, 181)'}}>
+                    <h1 className="divchildLowerbarh1">ENGINEERING</h1>
+                    <ul className="divchildLowerbarul">
+                        <li className="lidivchildLowerbarul">Are you in class 6-12 or in College or in University ?  Do not worry. </li>
+                        <li>With our experienced tutors grasp difficult concepts and be prepared for your humanities courses</li>
                     </ul>
                 </div>
             </div>  
