@@ -16,7 +16,6 @@ import WebDev from "./CodingComponents/WebDev.js";
 import ReactTeach from './CodingComponents/ReactTeach.js'
 import Python from "./CodingComponents/Python.js";
 import Javascript from "./CodingComponents/Javascript.js";
-
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 export default function App(){
