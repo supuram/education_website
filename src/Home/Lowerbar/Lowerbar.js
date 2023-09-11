@@ -88,7 +88,7 @@ export default function Lowerbar(){
                     <h1 className="divchildLowerbarh1">ENGINEERING</h1>
                     <ul className="divchildLowerbarul">
                         <li className="lidivchildLowerbarul">Are you in class 6-12 or in College or in University ?  Do not worry. </li>
-                        <li>With our experienced tutors grasp difficult concepts and be prepared for your humanities courses</li>
+                        <li>With our experienced tutors grasp difficult concepts and be prepared for your engineering courses</li>
                     </ul>
                 </div>
             </div>  

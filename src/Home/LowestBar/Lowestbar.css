@@ -1,0 +1,20 @@
+.maindivLowestbar{
+    display: flex;
+    background-color: black;
+    color: white;
+    margin-top: 2rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.childdivLowestbar1{
+    width:50rem;
+    margin: 3rem;
+}
+.childdivLowestbar2{
+    width:8rem;
+    margin: 3rem;
+}
+.childdivLowestbar3{
+    width:10rem;
+    margin: 3rem;
+}

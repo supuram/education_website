@@ -16,6 +16,8 @@ import WebDev from "./CodingComponents/WebDev.js";
 import ReactTeach from './CodingComponents/ReactTeach.js'
 import Python from "./CodingComponents/Python.js";
 import Javascript from "./CodingComponents/Javascript.js";
+import TeacherLogin from './Login/TeacherLogin.js'
+import AfterAdminLogin from "./Login/AfterAdminlogin/AfterAdminLogin.js";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 export default function App(){
@@ -36,10 +38,12 @@ export default function App(){
                     <Route path='/foundation' element={<Foundation />}></Route>
                     <Route path='/humanities' element={<Humanities />}></Route>
                     <Route path='/engineering' element={<Engineering />}></Route>
+                    <Route path='/teacherlogin' element={<TeacherLogin />}></Route>
                     <Route path='/coding/webdev' element={<WebDev />}></Route>
                     <Route path='/coding/reactteach' element={<ReactTeach />}></Route>
                     <Route path='/coding/python' element={<Python />}></Route>
                     <Route path='/coding/javascript' element={<Javascript />}></Route>
+                    <Route path='/adminlogin' element={<AfterAdminLogin />}></Route>
                 </Routes>
             </Router>
         </div>

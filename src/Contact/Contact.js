@@ -10,18 +10,26 @@ const db = firebase.firestore();
 console.log('contact')
 export default function Contact(){
     const [name, setName] = useState('')
+    const [phone, setPhone] = useState('')
+    const [email, setEmail] = useState('')
     const [division, setDivision] = useState('')
     const [subject, setSubject] = useState('')
     const [choice, setChoice] = useState('')
+    const [isSubmitted, setIsSubmitted] = useState(false);
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        const today = new Date();
-        const currdate = today.toISOString();
+        const currdate = firebase.firestore.Timestamp.fromDate(new Date());
+        setIsSubmitted(true)
+        setTimeout(() => {
+          setIsSubmitted(false);
+        }, 1200);
         // Create a new document in the "tasks" collection
         db.collection("userinfo")
           .add({
             Name: name,
+            Phone: phone,
+            Email: email,
             WhichClass: division,
             SubjectInterested: subject,
             Batch_or_OnetoOne: choice,
@@ -29,6 +37,8 @@ export default function Contact(){
           })
           .then(() => {
             setName('')
+            setPhone('')
+            setEmail('')
             setDivision('')
             setSubject('')
             setChoice('')
@@ -46,10 +56,19 @@ export default function Contact(){
             <div className="divContactus">
                 <h3 className="h3divContactus">Call Us - 91-7002561074 , 91-8250192710 , 91-9101043181</h3>
                 <h3 className="h3divContactus">Our gmail - tutorverse.info@gmail.com</h3>
+                {isSubmitted ? (
+                  <p style={{color:'white', fontSize:'4rem'}}>Your form has been submitted successfully</p>
+                ) : (
                 <form className="formdivContactus" onSubmit={handleSubmit}>
                     <input type="text" value={name} placeholder="Name" onChange={event => {
                       setName(event.target.value)
                     }}></input>
+                    <input type="text" value={phone} placeholder="Phone Number" onChange={event => {
+                      setPhone(event.target.value)
+                    }} required></input>
+                    <input type="email" value={email} placeholder="Email" onChange={event => {
+                      setEmail(event.target.value)
+                    }} required></input>
                     <input type="text" value={division} placeholder="Your Class" onChange={event => {
                       setDivision(event.target.value)
                     }}></input>
@@ -59,6 +78,7 @@ export default function Contact(){
                     }}></input>
                 <button>Submit</button>
                 </form>
+                )}
             </div>
         </div>
     )

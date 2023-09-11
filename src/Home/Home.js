@@ -4,6 +4,7 @@ import Topbar from "./Topbar/Topbar.js";
 import Middlebar from "./Middlebar/Middlebar.js";
 import Lowerbar from "./Lowerbar/Lowerbar.js";
 import Navbar from './Button/Navbar.js'
+import Lowestbar from './LowestBar/Lowestbar.js'
 
 export default function Home(){
     return(
@@ -15,6 +16,7 @@ export default function Home(){
             <div className="divHome"> 
                 <Middlebar />
                 <Lowerbar />
+                <Lowestbar />
             </div>
 
         </div>
