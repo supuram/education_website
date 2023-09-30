@@ -1,7 +1,7 @@
 .formRegister{
     width:400px;
     height:400px;
-    background-color:rgb(255, 148, 148);
+    background-color:rgb(148, 173, 255);
     display: flex;
     flex-direction: column;
     justify-content: center;

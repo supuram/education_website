@@ -18,6 +18,7 @@ import Python from "./CodingComponents/Python.js";
 import Javascript from "./CodingComponents/Javascript.js";
 import TeacherLogin from './Login/TeacherLogin.js'
 import AfterAdminLogin from "./Login/AfterAdminlogin/AfterAdminLogin.js";
+import AfterEducatorLogin from './Login/AfterEducatorLogin/AfterEducatorLogin.js'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 export default function App(){
@@ -44,6 +45,7 @@ export default function App(){
                     <Route path='/coding/python' element={<Python />}></Route>
                     <Route path='/coding/javascript' element={<Javascript />}></Route>
                     <Route path='/adminlogin' element={<AfterAdminLogin />}></Route>
+                    <Route path='/educatorlogin' element={<AfterEducatorLogin />}></Route>
                 </Routes>
             </Router>
         </div>

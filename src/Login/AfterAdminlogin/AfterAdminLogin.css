@@ -1,0 +1,22 @@
+.h1form{
+    color: black;
+}
+
+.divAssignStudentinAfterAdminLogin{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.inputAssignStudentinAfterAdminLogin{
+    width: 15rem;
+    height: 2rem;
+    margin-left: 4rem;
+    margin-top: 1rem;
+}
+
+.buttonAssignStudentinAfterAdminLogin{
+    margin-left: 31rem;
+    margin-top: 2rem;
+    width: 15rem;
+    height: 2rem;
+}

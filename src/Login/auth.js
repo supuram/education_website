@@ -1,4 +1,3 @@
-// auth.js
 import 'firebase/auth';
 import { auth } from './../firebase.js';
 import firebase from 'firebase/compat/app';
@@ -35,7 +34,6 @@ export const login = async(username, password) => {
         const userQuery = await db.collection('admin').where('username', '==', username).get();
     
         if (!userQuery.empty) {
-          // Get the first matching document (assuming usernames are unique)
           const userDoc = userQuery.docs[0];
           const userData = userDoc.data();
     
@@ -43,7 +41,6 @@ export const login = async(username, password) => {
           return auth.signInWithEmailAndPassword(userData.email, password);
         } 
         else {
-          // Username not found
           throw new Error('User not found');
         }
       } 
@@ -52,39 +49,112 @@ export const login = async(username, password) => {
       }
 };
 
-// Registration of Educator by the Admins
-export const educatorregister = async(email, password) => {
+// *! Registration of Educator by the Admins. See AfterAdminLogin.js
+export const educatorregisterbyadmins = async(username) => {
     try {
-        // Create a new document in the 'employeelogin' collection
         await db.collection('employeelogin').add({
-          email: email,
-          password: password,
+          username: username,
         });
     } 
     catch (error) {
-        throw error;
+      throw error;
     }
 }
 
-// Login for employees
+// *! See EducatorRegister.js
+export const educatorregister = async(username, dob, email, password) => {
+  try{
+    const userCredential = await auth.createUserWithEmailAndPassword(email, password);
+    const user = userCredential.user;
+    await user.sendEmailVerification();
+    const combinedVariable = `${username}_${dob}`;
+    const educatorRef = await db.collection('employeelogin')
+    .where('username', '==', username)
+    .get()
+    if (!educatorRef.empty) {
+      const doc = educatorRef.docs[0];
+      await db.collection('employeelogin').doc(doc.id).update({
+        email: email,
+        password: password,
+        username: combinedVariable
+    });
+  }
+  else {
+    throw new Error('Educator not found');
+  }
+  }
+  catch (error) {
+    throw error;
+  }
+}
+
+// *!  Login for employees. See EducatorLogin.js
 export const educatorlogin = async(username, password) => {
     try {
-        // Find the user based on the provided username
-        const userQuery = await db.collection('employeelogin')
+      const userQuery = await db.collection('employeelogin')
         .where('username', '==', username)
         .where('password', '==', password)
         .get();
     
-        if (!userQuery.empty) {
-            return true
-        } 
-        else {
-            return false
-        }
-      } catch (error) {
-        throw error;
+      if (!userQuery.empty) {
+        return true
+      } 
+      else {
+        return false
       }
+    } 
+    catch (error) {
+      throw error;
+    }
 }
+
+export const students_assigned_to_educator = async(studentname, subjectname, educatoremail) => {
+  try{
+    const educatorRef = await db.collection('employeelogin')
+    .where('email', '==', educatoremail)
+    .get()
+
+    if (!educatorRef.empty) {
+      const educatorDoc = educatorRef.docs[0]; 
+      const currentStudentInfo = educatorDoc.data().studentinfo || [];
+      currentStudentInfo.push({ studentname, subjectname });
+      await educatorDoc.ref.update({
+        studentinfo: currentStudentInfo
+      });
+    } 
+    else {
+      throw new Error('Educator not found');
+    }
+  }
+  catch (error) {
+    throw error;
+  }
+}
+
+// *! AfterEducatorLogin.js
+export const fetchStudents_for_AfterEducatorLogin = async (email) => {
+  try {
+    const snapshot = await db.collection('employeelogin')
+      .where('email', '==', email) 
+      .get();
+    const studentInfo = [];
+    snapshot.forEach((doc) => {
+      const studentData = doc.data().studentinfo;
+      if (Array.isArray(studentData)) {
+        studentData.forEach((student) => {
+          studentInfo.push({
+            studentname: student.studentname,
+            subjectname: student.subjectname,
+          });
+        });
+      }
+    });
+    return studentInfo;
+  } 
+  catch (error) {
+    throw error;
+  }
+};
 
 // Log out the current user
 export const logout = () => {

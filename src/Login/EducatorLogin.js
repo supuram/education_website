@@ -6,12 +6,14 @@ import './AdminLogin.css'
 export default function EducatorLogin(){
     const navigate = useNavigate();
     const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('')
     const [password, setPassword] = useState('');
 
     const handleAdminLogin = async(e) => {
         e.preventDefault()
         try{
-            await educatorlogin(username, password)
+            await educatorlogin(username, email, password)
+            navigate('/educatorlogin')
         }
         catch (error) {
             alert(error.message);
@@ -27,6 +29,14 @@ export default function EducatorLogin(){
                     placeholder="Username"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
+                />
+
+                <input
+                    className='inputRegister'
+                    type="email"
+                    placeholder="Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                 />
                 
                 <input
