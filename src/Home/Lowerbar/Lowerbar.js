@@ -42,8 +42,7 @@ export default function Lowerbar(){
                 <div onClick={() => handleButtonClick('/english')} className='divchildLowerbar' style={{backgroundColor:'rgb(102, 5, 110)'}}>
                     <h1 className="divchildLowerbarh1">English</h1>
                     <ul className="divchildLowerbarul">
-                        <li className="lidivchildLowerbarul">Learn English with our experienced tutors</li>
-                        <li>With our experienced tutors delve into the world of English</li>
+                        <li className="lidivchildLowerbarul">Journey through the intricacies of the English language with our meticulously designed English syllabi, closely aligned with the curricula of specific countries. From kindergarten to 12th grade, we offer tailored syllabi for students in India, Canada, Middle East, Australia, UK, and USA</li>
                     </ul>
                 </div>
 

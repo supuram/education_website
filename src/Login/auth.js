@@ -89,26 +89,29 @@ export const educatorregister = async(username, dob, email, password) => {
 }
 
 // *!  Login for employees. See EducatorLogin.js
-export const educatorlogin = async(username, password) => {
+export const educatorlogin = async(username, email, password) => {
     try {
       const userQuery = await db.collection('employeelogin')
-        .where('username', '==', username)
+        .where('email', '==', email)
         .where('password', '==', password)
         .get();
     
-      if (!userQuery.empty) {
-        return true
-      } 
-      else {
-        return false
-      }
+        if (!userQuery.empty) {
+          const userDoc = userQuery.docs[0];
+          const userData = userDoc.data();
+          return auth.signInWithEmailAndPassword(userData.email, userData.password);
+        } 
+        else {
+          throw new Error('User not found');
+        }
     } 
     catch (error) {
       throw error;
     }
 }
 
-export const students_assigned_to_educator = async(studentname, subjectname, educatoremail) => {
+// *! AfterAdminLogin.js
+export const students_assigned_to_educator = async(studentname, subjectname, educatoremail, classcount) => {
   try{
     const educatorRef = await db.collection('employeelogin')
     .where('email', '==', educatoremail)
@@ -117,7 +120,7 @@ export const students_assigned_to_educator = async(studentname, subjectname, edu
     if (!educatorRef.empty) {
       const educatorDoc = educatorRef.docs[0]; 
       const currentStudentInfo = educatorDoc.data().studentinfo || [];
-      currentStudentInfo.push({ studentname, subjectname });
+      currentStudentInfo.push({ studentname, subjectname, classcount });
       await educatorDoc.ref.update({
         studentinfo: currentStudentInfo
       });
@@ -145,6 +148,7 @@ export const fetchStudents_for_AfterEducatorLogin = async (email) => {
           studentInfo.push({
             studentname: student.studentname,
             subjectname: student.subjectname,
+            classcount: student.classcount
           });
         });
       }
@@ -155,6 +159,39 @@ export const fetchStudents_for_AfterEducatorLogin = async (email) => {
     throw error;
   }
 };
+
+// *! AfterEducatorLogin.js
+export const updateTotalClassesCount = async (studentname, subjectname, count, email) => {
+  try {
+    const educatorRef = await db.collection('employeelogin')
+      .where('email', '==', email)
+      .get()
+
+    if (!educatorRef.empty) {
+      const educatorDoc = educatorRef.docs[0];
+      const currentStudentInfo = educatorDoc.data().studentinfo || [];
+      const studentIndex = currentStudentInfo.findIndex((student) => student.studentname === studentname && student.subjectname === subjectname);
+
+      if (studentIndex !== -1) {
+        // Update the specific student's classcount
+        currentStudentInfo[studentIndex].classcount = count;
+
+        await educatorDoc.ref.update({
+          studentinfo: currentStudentInfo,
+        });
+      } 
+      else {
+        throw new Error('Student not found');
+      }
+    } 
+    else {
+      throw new Error('Educator not found');
+    }
+  } 
+  catch (error) {
+    throw error;
+  }
+}
 
 // Log out the current user
 export const logout = () => {
